@@ -18,10 +18,12 @@
     <main>
         <section>
             <h1>Add new entry</h1>
-            <form action="/entry" method="POST">
-                <label for="sample-field">Sample:</label>
-                <input type="text" name="sample" id="sample-field" />
-                <button type="submit">Submit</button>
+            <form class="form" action="/entry" method="POST">
+                <p class="form__input">
+                    <label for="entry" class="form__label">Entry contents</label>
+                    <textarea name="content" id="entry" class="form__textarea"></textarea>
+                </p>
+                <button type="submit" class="form__submit">Add entry</button>
             </form>
         </section>
         <section>
@@ -32,7 +34,6 @@
                     <time datetime="29-05-2025">May 29</time>
                 </div>
                     <p>Just starting off with hands-on HTML and CSS practice to build upon.</p>
-                
             </article>
         </section>
     </main>
