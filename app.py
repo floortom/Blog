@@ -13,7 +13,7 @@ def create_app():
     # MONGODB_PORT = 27017
 
     client = MongoClient(os.getenv("MONGODB_URI"))
-    app.db = client["Ideas"]
+    app.db = client.Ideas
 
     @app.route("/", methods=["GET", "POST"])
     def home():
@@ -21,7 +21,7 @@ def create_app():
         if request.method == "POST":
             reqCont = request.form.get("content")
             date = datetime.datetime.today().strftime("%Y-%m-%d")
-            app.db["Arbo"].insert_one({"content": reqCont,
+            app.db.Arbo.insert_one({"content": reqCont,
                                        "date": date,
                                        })
 
@@ -31,7 +31,7 @@ def create_app():
                 entry["date"],
                 datetime.datetime.strptime(entry["date"], "%Y-%m-%d").strftime("%b %d")
             )
-            for entry in app.db["Arbo"].find({})
+            for entry in app.db.Arbo.find({})
         ]
         # print(entriesWithDate)
 
