@@ -18,6 +18,14 @@ I built a simple microblog to document everything I’m learning—by the end, I
 4. **Flask & Backend Integration**  
    - Set up a Python/Flask server to handle form submissions, routing, and database connections—so every entry is stored permanently.  
 
+### 🌐 Deployment
+This web app is deployed on Render.com and uses a MongoDB Atlas cloud database for persistent storage.
+
+### 📈 Why This Matters
+ - It’s a full‑stack exercise: from planning and design to front‑end and back‑end implementation.
+ - Hands‑on experience with project management, design thinking, and real‑world web technologies.
+ - At the end, I’ll have a personalized learning journal that I can continue to build on, share, and extend with new features!
+
 ### 🛠️ Running Locally
 With your virtual environment activated, run the following in your console:
 
